@@ -1,6 +1,8 @@
 package com.invocify.Invoices.models;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,10 +16,21 @@ public class Company {
 	 @Id
 	 @GeneratedValue
 	 private int id;
+	 
 	 private String name;
 
 	 @OneToMany(mappedBy="company")
 	 private List<Invoice> invoice;
+	 
+	 
+	 public Company() {}
+	 
+	 public Company (String name, List<Invoice> invoice) {
+			this.name = name;
+			this.invoice = invoice;
+			
+		}
+
 
 	public int getId() {
 		return id;
