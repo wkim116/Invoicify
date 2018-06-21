@@ -1,26 +1,25 @@
 package com.invocify.Invoices.controllers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
 
-import com.invocify.Invoices.repositories.RateBasedBillingRecordRepository;
+import com.invocify.Invoices.models.RateBasedBillingRecord;
+import com.invocify.Invoices.repositories.BillingRecordRepository;
+
 
 @Controller
 public class RateBasedBillingController {
 
-	private RateBasedBillingRecordRepository rbBillingRecordRepo;
+	private BillingRecordRepository rbBillingRecordRepo;
 	
 	//Default constructor
-	public RateBasedBillingRecord() {}
+	public void RateBasedBillingRecord() {}
 	
 	
-	public List<RateBasedBillingRecord> list(){
-		List<RateBasedBillingRecord> rbBillingRecords = new ArrayList<RateBasedBillingRecord>();
-		rbBillingRecords = rbBillingRecordRepo.findAll();
-		
-		return rbBillingRecords;
+	//method to create a new Rate Based Billing Record and save it in the database
+	public RateBasedBillingRecord create(){
+		RateBasedBillingRecord rbBillingRecord = new RateBasedBillingRecord();
+		rbBillingRecordRepo.save(rbBillingRecord);
+		return rbBillingRecord;
 	}
 	
 }
