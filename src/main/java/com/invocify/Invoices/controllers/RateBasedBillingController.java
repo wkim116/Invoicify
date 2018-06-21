@@ -1,5 +1,6 @@
 package com.invocify.Invoices.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.invocify.Invoices.models.RateBasedBillingRecord;
@@ -9,6 +10,7 @@ import com.invocify.Invoices.repositories.BillingRecordRepository;
 @Controller
 public class RateBasedBillingController {
 
+	@Autowired
 	private BillingRecordRepository rbBillingRecordRepo;
 	
 	//Default constructor
