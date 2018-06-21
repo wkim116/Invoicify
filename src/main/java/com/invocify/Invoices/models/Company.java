@@ -31,7 +31,6 @@ public class Company {
 			
 		}
 
-
 	public int getId() {
 		return id;
 	}
@@ -55,7 +54,6 @@ public class Company {
 	public void setInvoice(List<Invoice> invoice) {
 		this.invoice = invoice;
 	}
-	 
-	 
+
 	 
 }
