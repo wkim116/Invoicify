@@ -1,5 +1,7 @@
 package com.invocify.Invoices.models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -7,15 +9,15 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Company")
+@Table(name="company")
 public class Company {
 	 @Id
 	 @GeneratedValue
 	 private int id;
 	 private String name;
 
-	 @OneToMany(mappedBy="Company")
-	 private Invoice invoice;
+	 @OneToMany(mappedBy="company")
+	 private List<Invoice> invoice;
 
 	public int getId() {
 		return id;
@@ -33,12 +35,14 @@ public class Company {
 		this.name = name;
 	}
 
-	public Invoice getInvoice() {
+	public List<Invoice> getInvoice() {
 		return invoice;
 	}
 
-	public void setInvoice(Invoice invoice) {
+	public void setInvoice(List<Invoice> invoice) {
 		this.invoice = invoice;
 	}
+	 
+	 
 	 
 }

@@ -1,5 +1,7 @@
 package com.invocify.Invoices.models;
 
+import java.util.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,12 +18,11 @@ public class Invoice {
 	@Id
 	@GeneratedValue
 	private int id; 
-	
-	public int createdOn;
-	public String invoiceDescription; 
+	private Date createdOn;
+	private String invoiceDescription; 
 	
 	@OneToMany(mappedBy="invoices", cascade=CascadeType.ALL)
-	
+	InvoiceLineItem  lineItems; 
 	
 	@ManyToOne
 	Company company; 
