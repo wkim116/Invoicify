@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="billing_records")
-abstract class BillingRecord {
+public abstract class BillingRecord {
 	
 	@Id
     @GeneratedValue
