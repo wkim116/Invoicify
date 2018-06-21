@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.invocify.Invoices.models.FlatFeeBillingRecord;
-import com.invocify.Invoices.repositories.FlatFeeBillingRecordRepository;
+import com.invocify.Invoices.repositories.BillingRecordRepository;
 
 @Controller
 public class FlatFeeBillingRecordController {
@@ -18,7 +18,7 @@ public class FlatFeeBillingRecordController {
 	//Create method
 	public FlatFeeBillingRecord create() {
 		FlatFeeBillingRecord flatFeeBillingRecord = new FlatFeeBillingRecord();
-		
+		return flatFeeBillingRecord;
 	}
 
 }
