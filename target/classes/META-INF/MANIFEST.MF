@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: Invocify
 Implementation-Version: 1.0.0
-Built-By: BZDXXV
+Built-By: GZD9L4
 Implementation-Vendor-Id: com.invocify
 Build-Jdk: 1.8.0_171
 Implementation-URL: http://projects.spring.io/spring-boot/Invocify/
