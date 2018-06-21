@@ -1,5 +1,9 @@
 package com.invocify.Invoices.repositories;
 
-public interface InvoiceLineItemRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.invocify.Invoices.models.InvoiceLineItem;
+
+public interface InvoiceLineItemRepository extends JpaRepository<InvoiceLineItem, Integer>{
 
 }
